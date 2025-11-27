@@ -309,9 +309,9 @@ This section demonstrates how the implementation meets typical RAG system requir
 | Stdio transport | ✅ `mcp.run(transport="stdio")` |
 | Schema with optional top_k | ✅ Default 4, range 1-10 |
 
-### Deviations from Skeleton
+### Design Enhancements
 
-1. **Both interfaces implemented** — Exercise required one; we provided both to demonstrate shared-core architecture
+1. **Both interfaces implemented** — Provided both HTTP API and MCP tool to demonstrate shared-core architecture
 2. **Interactive API key prompt** — Added secure `getpass` prompt for convenient demos without exposing keys
 3. **Upgraded models** — Using `text-embedding-3-small` and `gpt-4o-mini` (better price/performance)
 4. **Sentence-aware chunking** — Preserves semantic coherence vs. fixed splits
