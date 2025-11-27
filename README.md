@@ -1,6 +1,6 @@
 # FAQ RAG System
 
-A minimal **Retrieval-Augmented Generation (RAG)** prototype that answers questions from FAQ documents. Built for the Glean technical screen exercise.
+A minimal **Retrieval-Augmented Generation (RAG)** prototype that answers questions from FAQ documents.
 
 ## 🏗️ Architecture
 
