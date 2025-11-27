@@ -279,9 +279,9 @@ All settings are via environment variables:
 
 ---
 
-## ✅ Exercise Compliance
+## ✅ Example Compliance
 
-This implementation satisfies all requirements from the Glean technical screen exercise.
+This section demonstrates how the implementation meets typical RAG system requirements.
 
 ### Core RAG Requirements ✓
 
