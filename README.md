@@ -42,7 +42,6 @@ A minimal **Retrieval-Augmented Generation (RAG)** prototype that answers questi
 │   ├── faq_auth.md      # Authentication & password FAQs
 │   ├── faq_employee.md  # HR & benefits FAQs
 │   └── faq_sso.md       # SSO setup FAQs
-├── Instructions.md      # Exercise requirements
 └── README.md            # This file
 ```
 
@@ -282,7 +281,7 @@ All settings are via environment variables:
 
 ## ✅ Exercise Compliance
 
-This implementation satisfies all requirements from [Instructions.md](Instructions.md).
+This implementation satisfies all requirements from the Glean technical screen exercise.
 
 ### Core RAG Requirements ✓
 
