@@ -25,11 +25,28 @@ LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o-mini")
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "200"))
 TOP_K_DEFAULT = int(os.getenv("TOP_K_DEFAULT", "4"))
 
-# --- OpenAI Client Initialization (fail fast if key missing) ---
-_API_KEY = os.getenv("OPENAI_API_KEY")
-if not _API_KEY:
-    raise RuntimeError("OPENAI_API_KEY is not set. Please set it in your environment.")
+# --- OpenAI Client Initialization ---
+def _get_api_key() -> str:
+    """Get API key from environment or prompt user."""
+    key = os.getenv("OPENAI_API_KEY")
+    if key:
+        return key
+    
+    # Prompt user for key if not in environment
+    import getpass
+    print("\n" + "=" * 50)
+    print("OpenAI API Key Required")
+    print("=" * 50)
+    print("Enter your API key (input is hidden):")
+    key = getpass.getpass(prompt="OPENAI_API_KEY: ")
+    if not key.strip():
+        raise RuntimeError("API key cannot be empty")
+    
+    # Set it in environment for this session
+    os.environ["OPENAI_API_KEY"] = key.strip()
+    return key.strip()
 
+_API_KEY = _get_api_key()
 client = OpenAI(api_key=_API_KEY)
 
 # --- Global State (populated at module load) ---

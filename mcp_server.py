@@ -14,11 +14,8 @@ import os
 import sys
 from typing import Dict
 
-# Fail fast on missing API key (before importing rag_core)
-if not os.getenv("OPENAI_API_KEY"):
-    print("Error: OPENAI_API_KEY is not set", file=sys.stderr)
-    sys.exit(1)
-
+# Import rag_core (will prompt for API key if not set in env)
+# Note: For MCP, the key should be passed via env in the client config
 from mcp.server.fastmcp import FastMCP
 from rag_core import ask_faq_core
 

@@ -16,10 +16,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
-# Validate API key before importing rag_core (which needs it)
-if not os.getenv("OPENAI_API_KEY"):
-    raise RuntimeError("OPENAI_API_KEY is not set. Please set it in your environment.")
-
+# Import rag_core (will prompt for API key if not set)
 from rag_core import ask_faq_core
 
 # --- Logging Setup ---

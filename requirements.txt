@@ -7,5 +7,5 @@ fastapi>=0.111.0
 uvicorn>=0.30.0
 pydantic>=2.0.0
 
-# MCP server
+# MCP server (requires Python 3.10+)
 mcp>=1.0.0
