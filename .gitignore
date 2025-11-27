@@ -1,2 +1,19 @@
+# macOS
 .DS_Store
+
+# Python
 .venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Environment
+.env
+.env.local
